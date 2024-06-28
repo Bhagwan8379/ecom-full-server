@@ -4,7 +4,7 @@ const userController = require("./../controllers/user.controller")
 router
     .get("/order/:id", userController.userGetAllOrders)
     .get("/order-details/:id", userController.userGetOrderDetails)
-    .post("/placed-order", userController.userPlacedOrder)
+    .post("/order-placed", userController.userPlacedOrder)
     .put("/order-cancel/:id", userController.userCancelOrder)
     .post("/update-password/:id", userController.userUpdatePassword)
 
