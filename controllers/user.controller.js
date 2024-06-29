@@ -4,7 +4,7 @@ const Order = require("../model/Order")
 exports.userGetAllOrders = asyncHandler(async (req, res) => {
     const result = await Order
         .find({ user: req.params.id })
-        .sort({ createdAt: 1 })
+        .sort({ createdAt: -1 })
         .populate("products.product")
     res.json({ message: "Order Fetch Sucess", result })
 })
